@@ -1,15 +1,19 @@
 // import dict from './dict.js';
-dict = require('../build/sourceDict')
+const dict = require('../build/sourceDict');
+const commonWords = require('./commonWords5000');
+const text = require('./text');
 
-var time = new Date().getTime();
+let str = text;
 
-let str = 'привет пока';
+let time = new Date().getTime();
+
 const wordsCount = str.split(' ').length;
 let wordsReplace = 0;
 let newStr;
 let iter = 0;
 
-for (let key of Object.keys(dict)) {
+for (let key of commonWords) {
+// for (let key of Object.keys(dict)) {
   if (str.indexOf(key) !== -1) {
     str = str.replace(key, dict[key])
     wordsReplace++;
