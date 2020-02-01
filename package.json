@@ -2,8 +2,9 @@
   "name": "accent_words",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
+    "build": "webpack",
     "build sourceDict": "gulp",
     "start": "node test/index.js"
   },
@@ -13,6 +14,8 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-rename": "^1.4.0",
-    "gulp-replace": "^1.0.0"
+    "gulp-replace": "^1.0.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }
