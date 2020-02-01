@@ -5,6 +5,8 @@ const makeStartWithLowerCase = str => str[0].toLowerCase() + str.slice(1);
 
 module.exports = (text) => {
     const words = text.split(' ');
+    const accentWords = [];
+
     for (let word of words) {
         if (word) {
             let accentWord = dict[word];
